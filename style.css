@@ -1,0 +1,1074 @@
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-family: cursive; */
+}
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+header .sign {
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+    border: none;
+    border-radius: 10px;
+}
+
+header .sign:hover {
+    background: linear-gradient(to bottom, rgb(31, 145, 46), rgb(213, 250, 48));
+}
+
+header .hand-burger {
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+    border: none;
+}
+
+header .hand-burger:hover {
+    color: #000;
+    border: none;
+}
+header .hand-burger:focus:active {
+    color: #000;
+    border: none;
+}
+
+/* Back to Top Button Styles */
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(86, 29, 161);
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: rgb(56, 17, 105);
+}
+
+#mobileNav {
+    background-color: rgb(86, 29, 161);
+}
+
+.carousel-inner a {
+    margin-top: 60px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    width: 200px;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+}
+
+.carousel-inner a:hover {
+    background: linear-gradient(to bottom, rgb(31, 145, 46), rgb(213, 250, 48));
+}
+
+.carousel-inner p {
+    color: #acacac;
+}
+
+.carousel-inner span {
+    color: #fff;
+}
+
+/* Hero Carousel */
+.carousel-item {
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.hero-avatar {
+    animation: moveUpDown 3s ease-in-out infinite;
+    width: 100%;
+    max-width: 500px;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Adjust the value to control the movement */
+    }
+}
+
+/* Stack Images */
+.stack-images {
+    position: relative;
+    gap: 0;
+}
+
+.stack-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -8px;
+    border: 2px solid rgb(108, 36, 201);
+}
+
+.stack-images img:first-child {
+    margin-left: 0;
+}
+
+
+.features .row p {
+    color: #777;
+    font-size: 20px;
+}
+
+.features .row .card1,
+.features .row .card2,
+.features .row .card3 {
+    height: 380px;
+    font-size: 15px;
+}
+
+.features .row .card1 p,
+.features .row .card2 p,
+.features .row .card3 p {
+    font-size: 17px;
+}
+
+.features .row .card1 {
+    background-color: #f1d7efc0;
+}
+
+.features .row .card2 {
+    background-color: #dedee791;
+}
+
+.features .row .card3 {
+    background-color: #d3cfff;
+}
+
+/* General Adjustments */
+.scan,
+.mail {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.invoice {
+    width: 30rem;
+    height: 30rem;
+    object-fit: contain;
+    position: absolute;
+    bottom: -60px;
+    right: 50px;
+}
+
+.containerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.containerr img {
+    width: 400px;
+    object-fit: contain;
+}
+
+.titlee {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.stats {
+    display: flex;
+    margin-top: 80px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.cardss {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 40px;
+}
+
+.cardd {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 20px 0 0;
+    position: relative;
+    filter: blur(1px);
+    background-color: #fff;
+    box-shadow: 0 17px 25px rgba(3, 3, 3, 0.3);
+    transform: rotate(-12deg);
+}
+
+
+.cardd2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    opacity: 0.7;
+    animation: moveUpDownn 3s ease-in-out infinite;
+    
+}
+
+@keyframes moveUpDownn {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-12deg); /* Apply rotation here */
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(0deg); /* Reset rotation here */
+    }
+}
+
+
+.card-container {
+    position: relative;
+    margin: 0 10px;
+}
+
+.card-iconn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #333;
+}
+
+.card-titlee {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 80px;
+    color: #333;
+}
+
+.benefits {
+    background-color: #f8f9fa;
+}
+
+.free-tools {
+    background-color: #f0b7ca41; 
+    width: 55rem;
+}
+
+.custom-shape-divider-top {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(136% + 1.3px);
+    height: 150px;
+    /* Flip the SVG */
+}
+
+.custom-shape-divider-top .shape-fill {
+    fill: #ffffff;
+}
+
+.text-decoration-underline {
+    text-decoration-color: #2cd350 !important;
+}
+
+.testimonials {
+    position: relative;
+    background: linear-gradient(to bottom, rgb(97, 34, 180), rgba(196, 68, 255, 0.658));
+    z-index: 1;
+    padding: 50px 0;
+    height: 800px;
+}
+
+.test-card {
+    background-color: #ffffff10;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(3, 3, 3, 0.3);
+    max-width: 100%;
+    text-align: center;
+}
+
+.test-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card-subtitless {
+    font-size: 14px;
+    text-align: left;
+}
+
+.pagination {
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: #ccc 1px solid;
+    border-radius: 100px;
+}
+
+
+.get-started img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+
+.get-started a {
+    margin-top: 60px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    width: 200px;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+}
+
+.get-started a:hover {
+    background: linear-gradient(to bottom, rgb(31, 145, 46), rgb(213, 250, 48));
+}
+
+.get-started .p {
+    color: #727272;
+    font-size: 13px;
+}
+
+
+.test-card {
+    height: 300px;
+    background-color: #ffffff10;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 20px 0 0;
+    box-shadow: 0 10px 20px rgba(3, 3, 3, 0.3);
+}
+
+.test-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card-subtitless {
+    font-size: 14px;
+}
+
+.swiper-container {
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.swiper-pagination {
+    position: absolute;
+    margin-bottom: 40px;
+    left: 100%;
+    z-index: 3;
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+}
+
+
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    margin-top: 100px;
+    margin-bottom: -80px;
+}
+
+.faq-left {
+    width: 40%;
+}
+
+.faq-right {
+    width: 50%;
+}
+
+.faq-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.faq-description {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.faq-button {
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq-button:hover {
+    background: linear-gradient(to bottom, rgb(31, 145, 46), rgb(213, 250, 48));
+}
+
+.faq-img {
+    animation: moveUpDown 3s ease-in-out infinite;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 150px;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.faq-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item.open {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faq-item p {
+    margin-bottom: 0;
+    color: #666;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item .icon {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.3s ease;
+}
+
+.faq-item .icon.active {
+    transform: rotate(180deg);
+}
+
+.faq-item.open p {
+    display: block;
+    max-height: 100vh;
+}
+
+.question {
+    cursor: pointer;
+}
+
+.contact {
+    width: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 43px;
+    background-color: rgb(108, 36, 201);
+    position: relative;
+    z-index: 2;
+    transform: translateY(35%);
+}
+
+.contact-form  input{
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 40px;
+    border: none;
+    padding: 25px;
+}
+
+.contact-form textarea {
+    background-color: #ccc;
+    border-radius: 30px;
+    border: none;
+    padding: 20px;
+    height: 110px;
+
+}
+
+.btn-gst {
+    background: linear-gradient(to bottom, rgb(213, 250, 48), rgb(31, 145, 46));
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-gst:hover {
+    background: linear-gradient(to bottom, rgb(31, 145, 46), rgb(213, 250, 48));
+}
+
+footer {
+    height: 610px;
+    background-color: #cccaca86;
+    position: relative;
+    z-index: 1;
+}
+
+footer .container {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .footer-logo {
+    width: 100px;
+    object-fit: contain;
+}
+
+footer .footer-items {
+    padding: 50px 0;
+    
+}
+
+.download img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.download i {
+    font-size: 10px;
+    padding: 10px;
+    text-transform: capitalize !important;
+}
+
+
+.download .apple {
+    background-color: #141444 !important;
+}
+
+/* Media Query for extra large devices (large desktops, 1200px and below) */
+@media (max-width: 1200px) {
+    .carousel-caption h1 {
+        font-size: 3.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.75rem;
+    }
+
+    .stack-images img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-avatar {
+        max-width: 480px;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (max-width: 992px) {
+
+    
+
+    .invoice {
+        max-width: 20rem;
+        bottom: -100px;
+        right: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .features .row {
+        flex-wrap: wrap;
+    }
+
+    .features .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .benefits .stats {
+        flex-direction: row;
+    }
+
+    .benefits .stat {
+        margin-bottom: 15px;
+    }
+
+    .cardss {
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        padding: 0 80px;
+        justify-content: space-between;
+    }
+
+    .card-container {
+        margin: 15px 0;
+        
+    }
+
+    .cardd,
+    .cardd2 {
+        height: 100;
+    }
+
+    .testimonials {
+        overflow: hidden;
+        min-height: 1200px;
+    }
+    
+    .test-card {
+        height: 300px;
+        flex-direction: row !important;
+
+    }
+    .get-started {
+        flex-direction: column-reverse;
+    }
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .faq-right {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .btn-gst {
+        padding: 8px 18px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    .footer p,
+    .footer ul {
+        font-size: 13px;
+    }
+
+    .download img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .download i {
+        font-size: 12px;
+    }
+}
+
+/* Small Devices (Mobiles, 576px and up) */
+@media (max-width: 767px) {
+
+    .carousel-item {
+        min-height: 900px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 40%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-55%);
+    }
+
+    .hero-avatar {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-inner a {
+        margin-top: 30px;
+        width: 220px;
+    }
+
+    .stack-images img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scan,
+    .mail{
+        max-width: 300px;
+        right: 2px;
+        bottom: -20px;
+    }
+
+    .invoice {
+        max-width: 20rem;
+        bottom: -170px;
+        right: 10px;
+    }
+
+    .benefits .tit{
+        width: 100%;
+        text-align: center;
+        margin-bottom: -80px;
+    }
+
+    .benefits .stats {
+        flex-direction: row;
+    }
+
+    .cardss {
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+    .testimonials {
+        flex-direction: column !important;
+        overflow: hidden;
+        min-height: 1200px;
+    }
+
+    .card-subtitless h6 {
+        font-size: 13px;
+        
+    }
+
+    .card-subtitless p {
+        font-size: 11px;
+    }
+
+    .swiper-container {
+        overflow: hidden;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-img {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .contact {
+        width: 90%;
+        border-radius: 40px;
+        padding: 20px 0;
+        margin-top: -40%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        border-radius: 20px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btn-gst {
+        padding: 6px 12px;
+    }
+
+    footer {
+        height: 1400px;
+        background-color: #cccaca86;
+        position: relative;
+        z-index: 1;
+    }
+
+    footer .container {
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-items {
+        margin-bottom: -60px;
+    }
+    
+    .op,
+    .solu,
+    .download,
+    .footer-img {
+        margin-left: 60px;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 576px) {
+    
+    .carousel-caption {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .stack-images img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-avatar {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .scan,
+    .mail,
+    .invoice {
+        max-width: 300px;
+        right: 2px;
+        bottom: -20px;
+    }
+
+    .invoice {
+        max-width: 20rem;
+        bottom: -170px;
+        right: 10px;
+    }
+
+    .benefits .tit{
+        width: 100%;
+        text-align: center;
+        margin-bottom: -80px;
+    }
+
+    .benefits .stats {
+        flex-direction: row;
+    }
+
+    .testimonials {
+        flex-direction: column !important;
+        overflow: hidden;
+        min-height: 1200px;
+    }
+
+    .card-subtitless h6 {
+        font-size: 13px;
+        
+    }
+
+    .card-subtitless p {
+        font-size: 11px;
+    }
+
+    .swiper-container {
+        overflow: hidden;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-img {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .contact {
+        width: 90%;
+        border-radius: 40px;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        border-radius: 20px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btn-gst {
+        padding: 6px 12px;
+    }
+
+    footer {
+        height: 1400px;
+        background-color: #cccaca86;
+        position: relative;
+        z-index: 1;
+    }
+
+    footer .container {
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-items {
+        margin-bottom: -60px;
+    }
+    
+    .op,
+    .solu,
+    .download,
+    .footer-img {
+        margin-left: 0px;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+}

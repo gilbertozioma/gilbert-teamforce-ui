@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilbert - TeamForce</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Validation CSS -->
+    <style>
+        .is-invalid {
+            border-color: rgb(253, 51, 51);
+            border-width: 1px;
+            border-radius: 5px;
+        }
+    
+        .invalid-feedback {
+            color: rgb(253, 51, 51);
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <!-- 
+    | ------------------------------- ATTENTION ⚠ --------------------------------------- 
+    | 
+    | FORM HANDLING: Initially considered PHP, but its local server configuration 
+    | requirements could make the project difficult to run for others. 
+    | Opted for JavaScript's Emailjs for a simpler, more accessible setup.
+    |
+    | Any message submitted to the form will be sent to my email address.
+    | I will respond to the message via the email address provided in the form
+    | for confirmation purposes.
+    | ------------------------------------------------------------------------------------- 
+    -->
+
+
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" class="back-to-top-btn"><i class="fa-solid fa-angles-up"></i></button>
+
+    <!-- Header -->
+    <header class="text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="logo d-flex align-items-center">
+                <img src="images/logo-white.png" alt="TeamForce Logo" class="h-10 me-2">
+            </a>
+            <nav class="d-none d-md-flex justify-content-between">
+                <a href="#" class="text-white text-decoration-none me-4">Home</a>
+                <a href="#" class="text-white text-decoration-none me-4">Pages</a>
+                <a href="#" class="text-white text-decoration-none me-4">Projects</a>
+                <a href="#" class="text-white text-decoration-none me-4">Blog</a>
+                <a href="#" class="text-white text-decoration-none">Contact</a>
+            </nav>
+            <div class="buttons d-none d-md-flex">
+                <button class="btn text-light px-4 py-2 rounded-md">Login</button>
+                <button class="btn sign text-white px-4 py-2">Sign Up</button>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="btn hand-burger d-md-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="collapse d-md-none" id="mobileNav">
+            <nav class="d-flex flex-column align-items-start">
+                <a href="#" class="text-white text-decoration-none my-4 ms-3">Home</a>
+                <a href="#" class="text-white text-decoration-none my-4 ms-3">Pages</a>
+                <a href="#" class="text-white text-decoration-none my-4 ms-3">Projects</a>
+                <a href="#" class="text-white text-decoration-none my-4 ms-3">Blog</a>
+                <a href="#" class="text-white text-decoration-none my-4 ms-3">Contact</a>
+                <div class="buttons mt-3">
+                    <button class="btn text-light px-4 py-2 rounded-md mb-5">Login</button>
+                    <button class="btn sign text-white mb-5 px-4 py-2">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Carousel -->
+    <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('images/hero-img1.png');">
+                <div class="carousel-caption container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-8 col-12 text-center text-md-start">
+                            <h1 class="display-3 fw-bold">The next <br> generation <br> payment ways.</h1>
+                            <a href="#" class="btn text-white mt-4">Get Started For Free</a>
+                            <p class="mt-4">Over <span>50k+ clients</span> all over the world</p>
+                            <div
+                                class="stack-images d-flex align-items-center justify-content-center justify-content-md-start mt-3">
+                                <img src="images/stack-img4.jpg" alt="Stack Image1">
+                                <img src="images/stack-img3.jpg" alt="Stack Image2">
+                                <img src="images/stack-img2.jpg" alt="Stack Image3">
+                                <img src="images/stack-img1.jpg" alt="Stack Image4">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4 d-md-block">
+                            <img src="images/hero-avatar1.png" alt="Hero Avatar 1" class="hero-avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('images/hero-img2.png');">
+                <div class="carousel-caption container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-8 col-12 text-center text-md-start">
+                            <h1 class="display-3 fw-bold">A new way <br> to manage <br> payments.</h1>
+                            <a href="#" class="btn text-white mt-4">Get Started For Free</a>
+                            <p class="mt-4">Over <span>50k+ clients</span> all over the world</p>
+                            <div
+                                class="stack-images d-flex align-items-center justify-content-center justify-content-md-start mt-3">
+                                <img src="images/stack-img1.jpg" alt="Stack Image1">
+                                <img src="images/stack-img2.jpg" alt="Stack Image2">
+                                <img src="images/stack-img3.jpg" alt="Stack Image3">
+                                <img src="images/stack-img4.jpg" alt="Stack Image4">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4 d-md-block">
+                            <img src="images/hero-avatar2.png" alt="Hero Avatar 2" class="hero-avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container">
+            <h3 class="display-4 text-center fw-bold">You'll love our <br> powerful payments.</h3>
+            <p class="text-center mb-5">We've got your payment covered</p>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card card1 d-flex flex-direction-column p-4 p-md-5 rounded-5 border-0">
+                        <div class="card-body">
+                            <h4 class="card-title">Scan & Go</h4>
+                            <p class="card-text">Transform your payment link into a QR code that customers can scan with
+                                their <br> phone to pay.</p>
+                        </div>
+                        <img src="images/scan&go.png" alt="QR Code Scan"
+                            class="scan position-absolute mb-3 me-3 bottom-0 end-0">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card card2 d-flex flex-direction-column p-4 p-md-5 rounded-5 border-0">
+                        <div class="card-body">
+                            <h4 class="card-title">Easily Send Requests via <br> e-mail or SMS</h4>
+                            <p class="card-text">...or copy-paste the link</p>
+                        </div>
+                        <img src="images/email&sms.png" alt="Email & SMS Payment"
+                            class="mail position-absolute bottom-0 end-0">
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card card3 d-flex flex-direction-column p-4 p-md-5 rounded-5 border-0">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Online Billing & <br>Invoicing Payments.</h4>
+                            <p class="card-text mb-5">Get paid faster with Online Invoicing <br> and the Virtual Terminal.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold">Explore invoice tools
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                        <img src="images/invoice.png" alt="Online Billing" class="invoice">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Payment Methods Section -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="display-4 text-center fw-bold">All major <br> payment methods</h3>
+            <p class="text-center mb-5" style="color: #777; font-size: 15px;">We've got all your payment covered</p>
+            <img src="images/payment-methods.png" alt="Payment Methods" class="img-fluid w-100" style="cursor: pointer;">
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits py-5 position-relative">
+        <!-- Custom Shape Divider at the Top -->
+        <div class="custom-shape-divider-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    
+        <div class="containerr">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 tit">
+                        <h3 class="display-5 fw-bold">We provide the <br> best service for you</h3>
+                        <p class="mb-5" style="color: #777; font-size: 15px;">We've got all your payments covered</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-number">3.5m</div>
+                                <div class="stat-label">Active Users</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">240+</div>
+                                <div class="stat-label">Trusted Companies</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">78k</div>
+                                <div class="stat-label">Customer care</div>
+                            </div>
+                        </div>
+                        <img src="images/red-underline.png" alt="Underline">
+                    </div>
+                </div>
+            </div>
+            <div class="cardss">
+                <div class="card-container">
+                    <div class="cardd" style="background: linear-gradient(to bottom, #b1e5ff, #48acf8);"></div>
+                    <div class="cardd2">
+                        <i class="fas fa-globe fa-2x mt-5"></i>
+                        <div class="card-titlee">Online</div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardd" style="background: linear-gradient(to bottom, #e1f598, #2cd350);"></div>
+                    <div class="cardd2">
+                        <i class="fas fa-building fa-2x mt-5"></i>
+                        <div class="card-titlee">Bank Transfers</div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardd" style="background: linear-gradient(to bottom, #f5f0c4, #f5709c);"></div>
+                    <div class="cardd2">
+                        <i class="fas fa-keyboard fa-2x mt-5"></i>
+                        <div class="card-titlee">Keyed</div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="cardd" style="background: linear-gradient(to bottom, #d3cfff, #7864fc);"></div>
+                    <div class="cardd2">
+                        <i class="fas fa-user-secret fa-2x mt-5"></i>
+                        <div class="card-titlee">In-Person</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Free Tools Section -->
+    <section class="bg-light py-5">
+        <div class="container rounded-5 free-tools m-4 mx-auto p-5 my-5">
+            <div class="row">
+                <h4 class="mb-4">More free tools than you can handle</h4>
+                <div class="d-md-flex flex-direction-column align-items-center justify-content-between">
+                    <ul class="">
+                        <li class="item">Invoicing</li>
+                        <li class="item">iCard Vault</li>
+                        <li class="item">Recurring Plans</li>
+                    </ul>
+                    <ul class="">
+                        <li class="item">Online Checkout</li>
+                        <li class="item">Customer Portal</li>
+                        <li class="item">Payment Links</li>
+                    </ul>
+                    <ul class="">
+                        <li class="item">Point-of-Sale</li>
+                        <li class="item">Inventory</li>
+                        <li class="item">SMS Payments</li>
+                    </ul>
+                    <ul class="">
+                        <li class="item">Online Food Ordering</li>
+                        <li class="item">Virtual Terminal</li>
+                        <li class="-ite">QR Codes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Get Started Section -->
+    <section class="py-5 bg-light get-started">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/get-started.png" alt="Open an account">
+                </div>
+                <div class="col-md-6">
+                    <p class="text-decoration-underline" style="font-size: 20px; color: #777;">Open an account</p>
+                    <h1 class="display-4 fw-bold mb-3">Let's get started</h1>
+                    <ol class="list-numbered">
+                        <li class="item p-3 fs-5">Sign up in a few minutes</li>
+                        <li class="item p-3 fs-5">Let us verify your identity</li>
+                        <li class="item p-3 fs-5">Your account is open, you can send <br> your first payment</li>
+                    </ol>
+                    <a href="#" class="text-light px-4 w-50 btn-block">Open An Account in a Minutes</a>
+                    <p class="mt-3 p">Try it for 30 days. For free. No obligations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5 bg-primary text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">What people <br> are saying about us</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                                <div class="card test-card rounded-4 text-light fs-5">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        <div class="ml-2">
+                                            <div class="text-warning">★★★★★</div>
+                                        </div>
+                                        <p class="card-text">"Is it possible to Love your credit card processor? with
+                                            TeamForce, yes!"</p>
+                                        <div class="d-flex d-flex justify-content-center align-items-center mt-4">
+                                            <img src="images/stack-img1.jpg" alt="Testimonial Avatar"
+                                                class="rounded-circle me-3">
+                                            <div class="card-subtitless">
+                                                <h6 class="card-subtitle fw-bold">Lana Rey</h6>
+                                                <p class="card-subtitle">Founder & Leader</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                                <div class="card test-card rounded-4 text-light fs-5">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        <div class="ml-2">
+                                            <div class="text-warning">★★★★★</div>
+                                        </div>
+                                        <p class="card-text">"Is it possible to Love your credit card processor? with
+                                            TeamForce, yes!"</p>
+                                        <div class="d-flex d-flex justify-content-center align-items-center mt-4">
+                                            <img src="images/stack-img2.jpg" alt="Testimonial Avatar"
+                                                class="rounded-circle me-3">
+                                            <div class="card-subtitless">
+                                                <h6 class="card-subtitle fw-bold">J.McGhee</h6>
+                                                <p class="card-subtitle">Founder & Leader</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                                <div class="card test-card rounded-4 text-light fs-5">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        <div class="ml-2">
+                                            <div class="text-warning">★★★★★</div>
+                                        </div>
+                                        <p class="card-text">"Is it possible to Love your credit card processor? with
+                                            TeamForce, yes!"</p>
+                                        <div class="d-flex d-flex justify-content-center align-items-center mt-4">
+                                            <img src="images/stack-img3.jpg" alt="Testimonial Avatar"
+                                                class="rounded-circle me-3">
+                                            <div class="card-subtitless">
+                                                <h6 class="card-subtitle fw-bold">Michael H.</h6>
+                                                <p class="card-subtitle">Founder & Leader</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                 <div class="pagnate d-flex justify-content-center mt-3">
+                    <div class="pagination border-0 bg-white"></div>
+                    <div class="pagination"></div>
+                    <div class="pagination"></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="container">
+        <div class="row faq-container">
+            <div class="col-md-4 faq-left">
+                <h2 class="faq-title">Frequently <br> Asked Questions</h2>
+                <p class="faq-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium!</p>
+                <button class="faq-button">Get in Touch</button>
+                <img src="images/faq.png" class="faq-img" alt="FAQ Image">
+            </div>
+            <div class="col-md-8 faq-right">
+                <div class="faq-item">
+                    <div class="d-flex">
+                        <h3 class="question">Do I need to change banks??</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <p>The Teamforce is built right into your account dashboard, and is accessible immediately after
+                        signing up.</p>
+                </div>
+                <div class="faq-item">
+                    <div class="d-flex">
+                        <h3 class="question">How can I order equipment?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, expedita?</p>
+                </div>
+                <div class="faq-item">
+                    <div class="d-flex">
+                        <h3 class="question">Do you offer volume discounts?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, expedita?</p>
+                </div>
+                <div class="faq-item">
+                    <div class="d-flex">
+                        <h3 class="question">How does signing up work?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, expedita?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="contact-form" id="contact-form">
+                        <div class="mb-3">
+                            <input type="hidden" id="contact_number">
+                            <input type="text" name="sender_name" class="form-control" id="sender_name"
+                                placeholder="Full name">
+                            <div class="invalid-feedback" id="sender_name_error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="sender_email" class="form-control" id="sender_email"
+                                placeholder="Email address">
+                            <div class="invalid-feedback" id="sender_email_error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="subject" id="subject" class="form-control"
+                                placeholder="Subject" />
+                            <div class="invalid-feedback" id="subject_error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" id="message" rows="3"
+                                placeholder="Enter your message"></textarea>
+                            <div class="invalid-feedback" id="message_error"></div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="sendMessage();" id="sendMessage" class="btn-gst">
+                                <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"
+                                    aria-hidden="true"></span>
+                                <span id="button-text">Get Started Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-dark py-4">
+        <div class="container">
+            <div class="row footer-items">
+                <div class="col-md-3 mb-5 footer-img">
+                    <img src="images/logo-blue.png" alt="TeamForce Logo" class="img-fluid mb-4 footer-logo">
+                    <p>Lorem Ipsum Lorem Ipsum</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone-alt"></i> +999999999</li>
+                        <li><i class="fas fa-envelope"></i> teamforce@loremipsum.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 solu mb-5">
+                    <h5 class=" mb-4">Solutions</h5>
+                    <ul class="mb-4">
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Payments</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Advances</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Online Checkout</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Dashboard</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Get Started</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 op mb-5">
+                    <h5 class=" mb-4">Other Pages</h5>
+                    <ul class="mb-4">
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">About</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Services</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">How It Works</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Pricing Plan</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="mb-5 text-dark text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 download mb-5">
+                    <h5 class="mb-4">Download Our App</h5>
+                    <div class="d-flex flex-wrap">
+                        <img src="images/QR-Code.png" alt="Download Our App" class="rounded-3 img-fluid">
+                        <div class="d-flex flex-column justify-content-center">
+                            <i class="fa-brands fa-apple text-light px-3 rounded-3 mb-2 apple bg-dark">Apple Store</i>
+                            <i class="fa-brands fa-google-play px-3 rounded-3 bg-white">Google Play</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center social-icons">
+                    <p class="mt-4">
+                        <i class="fa-brands fa-facebook me-1 rounded shadow-sm bg-white p-2"></i>
+                        <i class="fa-brands fa-twitter me-1 rounded shadow-sm bg-white p-2"></i>
+                        <i class="fa-brands fa-instagram me-1 rounded shadow-sm bg-white p-2"></i>
+                        <i class="fa-brands fa-linkedin me-1 rounded shadow-sm bg-white p-2"></i>
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <p class="mt-4">Full Copyright & designed by Gilbert Ozioma - 2024</p>
+                </div>
+                <div class="col-md-3 text-center language">
+                    <p class="mt-4">
+                        <select class="border-0 p-1 rounded-3 shadow-sm" name="language" id="">
+                            <option value="">English (US)</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper CDN -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Custom JS -->
+     <script src="script.js"></script>
+</body>
+
+</html>
